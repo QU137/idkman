@@ -1,4 +1,5 @@
 #include <stdio.h>
+define pi 3.14159265
 float pow(float a, int b) {
 	if (b < 0)
 		return pow(a, -b);
@@ -20,14 +21,20 @@ int main() {
 	int n = 1;
 	float x = 0, sums = 0, sumc = 0, X = 0;
 	printf("Input x in degrees:");
-	scanf_s("%f", &x);
+	if (scanf_s("%f", &x) != 1) {
+		printf("Input error");
+		return 0;
+	}
 	printf("Input number of iterations for accuracy:");
-	scanf_s("%d", &n);
+	if (scanf_s("%d", &n) != 1) {
+		printf("Input error");
+		return 0;
+	}
 	if (n < 1) {
 		printf("Input error");
 		return 0;
 	}
-	X = (x * 3.14159265) / 180;
+	X = (x * pi) / 180;
 	for (int i = 1; i <= n; i++) {
 		sums = sums + (pow(X, 2 * i - 1) * pow(-1, i + 1)) / fact(2 * i - 1);
 		sumc = sumc + (pow(X, 2 * i - 2) * pow(-1, i + 1)) / fact(2 * i - 2);
