@@ -1,0 +1,3 @@
+﻿  Source.c
+D:\Github\LW3T3\LW3T3\Source.c(6,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  LW3T3.vcxproj -> D:\Github\LW3T3\x64\Debug\LW3T3.exe
