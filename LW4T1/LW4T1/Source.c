@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#define a 8
+#define a 4
 #define lim 100
 int main() {
 	srand(time(NULL));
