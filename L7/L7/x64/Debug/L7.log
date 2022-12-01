@@ -1,8 +1,8 @@
-﻿  Source.c
-  funcs.c
+﻿  funcs.c
 D:\Github\private\L7\L7\funcs.c(11,17): warning C4473: 'scanf_s' : not enough arguments passed for format string
 D:\Github\private\L7\L7\funcs.c(11,17): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
 D:\Github\private\L7\L7\funcs.c(11,17): message : the missing variadic argument 2 is required by format string '%c'
 D:\Github\private\L7\L7\funcs.c(11,17): message : this argument is used as a buffer size
+  Source.c
   Generating Code...
   L7.vcxproj -> D:\Github\private\L7\x64\Debug\L7.exe

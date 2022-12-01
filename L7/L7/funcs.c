@@ -1,17 +1,15 @@
 #include <stdio.h> 
 #include <stdlib.h> 
+void print(char* ptr) {
+	for (int i = 0; ptr[i] != '\0'; i++)
+		printf("%c", ptr[i]);
+}
 char* reall(char* ptr,int size,int sizenew) {
 	char* ptr1 = (char*)malloc(sizenew);
 	for (int i = 0; (i < size && i < sizenew); i++)
 		*(ptr1 + i) = *(ptr+i);
 	*(ptr1 + sizenew) = '\0';
 	return ptr1;
-}
-void  check(char* place) {
-	while (scanf_s("%c", place) != 1 || getchar() != '\n') {
-		printf("try again\n");
-		rewind(stdin);
-	}
 }
 int letter(char* line, int i) {
 	if ((*(line + i) >= 'a' && *(line + i) <= 'z') || (*(line + i) >= 'A' && *(line + i) <= 'Z'))
@@ -58,8 +56,7 @@ void firsttask(char** line, char* line2) {
 		}
 	}
 	*line = reall(*line, len,len * (sizeof(char)));
-	for(int i=0;line[0][i]!='\0';i++)
-		printf("%c",line[0][i]);
+	print(*line);;
 }
 void secondtask(char** line1, char* line2) {
 	int len = 1,count=0;
@@ -90,6 +87,5 @@ void secondtask(char** line1, char* line2) {
 		}
 	}
 	*line1 = reall(*line1, len + count, len);
-	for (int i = 0; line1[0][i] != '\0'; i++)
-		printf("%c", line1[0][i]);
+	print(*line1);
 }
